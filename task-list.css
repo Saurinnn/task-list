@@ -1,0 +1,87 @@
+/*外枠の設定*/
+body{
+  background-color: #ded;
+}
+.container{
+  width: 800px;
+  margin: 0 auto;
+  font-family : sans-serif; 
+}
+
+/*フォームの設定*/
+h1 {
+  text-align: center;
+}
+.inputarea {
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* row class */
+.inputarea .row {
+  margin: 10px 0;
+}
+.inputarea input{
+  border: solid 2px #A4A4A4;
+}
+#taskmonth{
+  width: 150px;
+  height: 34px;
+}
+#tasktitle{
+  width: 500px;
+  height: 32px;
+}
+.inputarea .row select{
+  border: solid 2px #A4A4A4;
+  height: 38px;
+}
+
+.inputarea .row textarea{
+  border: solid 2px #A4A4A4;
+  width: 500px;
+  height: 100px;
+}
+
+/* button */
+.inputarea button {
+  padding: 3px 20px;
+  background-color: #44f;
+  color: white;
+  font-weight: bold;
+  font-size:1.2em;
+  border: solid 2px #A4A4A4;
+  border-radius: 5px;
+}
+
+/*              */
+/* tasklistarea */
+/*              */
+
+/* table */
+.tasklistarea table {
+  width: 100%;
+}
+
+/* th */
+.tasklistarea th {
+  background-color: #277;
+  color: #fff;
+}
+
+/*td*/
+.tasklistarea td{
+  background-color: #def9fa;
+  color: #000;
+}
+/* button */
+.tasklistarea button {
+  display: block;  
+  margin: 0 auto;  
+  background-color: #444;
+  border: solid 2px #A4A4A4;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+
+}
