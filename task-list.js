@@ -27,7 +27,8 @@ submitButton.onclick = () => {
 
 function addTask(task){
   tasks.push(task);
-  console.log(tasks);
+  const jsonString = JSON.stringify(tasks);
+  localStorage.setItem('tasks',jsonString);
   displayTaskList();
 }
 
