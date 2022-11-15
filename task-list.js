@@ -5,7 +5,6 @@ const taskTitle = document.getElementById("tasktitle");
 const taskDetail = document.getElementById("taskdetail");
 const submitButton = document.getElementById("submit");
 const taskListTbody = document.getElementById("tasklist");
-
 let tasks = [];
 
 submitButton.onclick = () => {
@@ -27,9 +26,13 @@ submitButton.onclick = () => {
 
 function addTask(task){
   tasks.push(task);
+  savaTask();
+  displayTaskList();
+}
+
+function savaTask(){
   const jsonString = JSON.stringify(tasks);
   localStorage.setItem('tasks',jsonString);
-  displayTaskList();
 }
 
 function deleteTask(deleteIndex){
