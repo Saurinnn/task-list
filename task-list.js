@@ -5,7 +5,10 @@ const taskTitle = document.getElementById("tasktitle");
 const taskDetail = document.getElementById("taskdetail");
 const submitButton = document.getElementById("submit");
 const taskListTbody = document.getElementById("tasklist");
-let tasks = [];
+const taskList =JSON.parse(localStorage.getItem('tasks'));
+
+let tasks = taskList || [];
+displayTaskList();
 
 submitButton.onclick = () => {
  //taskオブジェクトにタスクの情報を登録する
@@ -43,7 +46,7 @@ function deleteTask(deleteIndex){
 function displayTaskList(){
   taskListTbody.innerText="";
   for(let i = 0;i < tasks.length;i++){
-    const task = tasks[i];
+    const task = taskList[i];
     // テーブル行を作る
     const taskTr = document.createElement('tr');
     const monthTd = document.createElement('td');
@@ -71,6 +74,7 @@ function displayTaskList(){
   }
 }
 
+/*
 //サンプルデータを追加
 function addSample(){
   const task = {
@@ -79,7 +83,7 @@ function addSample(){
     title: "A 社経営統合プロジェクト", //タイトル
     detail: '経営統合に伴う業務プロセス統合プロジェクト。\nプロジェクトリーダー（メンバー４人）として担当。\nＱＤＣ目標いずれも達成。ＣＳ評価で５をいただいた。' //概要
    }
-   addTask(task);
+  addTask(task);
 }
 
-addSample();
+addSample(); */
