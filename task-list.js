@@ -10,8 +10,8 @@ const taskList =JSON.parse(localStorage.getItem('tasks'));
 let tasks = taskList || [];
 displayTaskList();
 
-if(tasks.length === 0){
 //サンプルデータを追加
+if(tasks.length === 0){
 function addSample(){
   const task = {
     month: 	"2021-07", //実施月
@@ -55,6 +55,8 @@ function savaTask(){
 
 function deleteTask(deleteIndex){
   tasks.splice(deleteIndex,1);
+  localStorage.removeItem('tasks');
+  savaTask();
   displayTaskList();
 }
 
